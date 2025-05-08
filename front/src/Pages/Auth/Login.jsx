@@ -62,7 +62,7 @@ const Login = () => {
 
         <div className='flex space-x-2'>
           <p>Don't Have an Account,</p>
-          <Link className='font-bold text-yellow-800' to='/register'>Register</Link>
+          <Link className='font-bold text-purple-800' to='/register'>Register</Link>
         </div>
 
         <button type="submit" disabled={loading}

@@ -65,7 +65,7 @@ function SearchRes() {
           <p className='text-4xl font-bold'>Search Results for <span className='font-light'>{searchQuery}</span>
           </p>
           {!searchQuery && (
-            <Link to='/events' className='p-3 bg-yellow-600 text-white text-xl rounded-4xl'>All Events</Link>
+            <Link to='/events' className='p-3 bg-purple-600 text-white text-xl rounded-4xl'>All Events</Link>
           )}
         </div>
 

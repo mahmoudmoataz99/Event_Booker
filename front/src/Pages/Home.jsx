@@ -86,7 +86,7 @@ function Home() {
           </p>
           <Link
             to="/events"
-            className="px-8 py-3 bg-yellow-600 text-white text-xl rounded-full hover:bg-yellow-700 transition duration-300"
+            className="px-8 py-3 bg-purple-600 text-white text-xl rounded-full hover:bg-purple-700 transition duration-300"
           >
             Browse All Events
           </Link>
@@ -148,7 +148,7 @@ function Home() {
         <div className="container mx-auto px-4 mt-16">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">Latest Events</h2>
-            <Link to="/events" className="px-6 py-2 bg-yellow-600 text-white rounded-full hover:bg-yellow-700 transition">
+            <Link to="/events" className="px-6 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition">
               View More
             </Link>
           </div>

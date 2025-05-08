@@ -17,7 +17,7 @@ function Search() {
   <form onSubmit={handleSubmit} className="bg-gray-100 rounded-xl lg:mx-20 my-4 px-4 flex justify-between items-center">
    <input type="search" className="w-full max-w-md p-2 rounded-lg focus:outline-none"
     placeholder="Search 4 Events" value={query} onChange={(e) => setQuery(e.target.value)} />
-   <button type="submit" className="ml-2 p-2 text-xl text-gray-600 hover:text-yellow-600 focus:outline-none">
+   <button type="submit" className="ml-2 p-2 text-xl text-gray-600 hover:text-purple-600 focus:outline-none">
     <FaSearch />
    </button>
   </form>

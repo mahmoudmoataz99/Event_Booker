@@ -121,7 +121,7 @@ function EventDetails() {
           {event.categories.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {event.categories.map((cat, index) => (
-                <span key={index} className="bg-yellow-200 text-sm px-3 py-1 rounded-full">
+                <span key={index} className="bg-purple-200 text-sm px-3 py-1 rounded-full">
                   {cat}
                 </span>
               ))}
@@ -165,12 +165,12 @@ function EventDetails() {
               ) : (
                 <button onClick={handleBooking} disabled={loading || event.availableSeats === 0}
                   className={`px-6 py-3 rounded w-full md:w-auto ${loading || event.availableSeats === 0
-                    ? 'bg-gray-400 cursor-not-allowed' : 'bg-yellow-600 hover:bg-yellow-700 text-white'}`}>
+                    ? 'bg-gray-400 cursor-not-allowed' : 'bg-purple-600 hover:bg-purple-700 text-white'}`}>
                   {loading ? 'Processing...' : event.availableSeats === 0 ? 'Sold Out' : 'Book Now'}
                 </button>
               )
             ) : (
-              <Link to="/login" className="block text-center bg-yellow-600 text-white px-6 py-3 rounded hover:bg-yellow-700 w-full md:w-auto">
+              <Link to="/login" className="block text-center bg-purple-600 text-white px-6 py-3 rounded hover:bg-purple-700 w-full md:w-auto">
                 Login to book
               </Link>
             )}

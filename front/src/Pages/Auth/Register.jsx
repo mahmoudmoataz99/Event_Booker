@@ -33,7 +33,7 @@ function Register() {
        <input type="text" value={name} onChange={(e) => setName(e.target.value)}
         className={`bg-gray-200 p-2 rounded-lg focus:outline-0 ${submitted && !name ? 'bg-red-300' : ''}`} />
        {submitted && !name && (
-        <p className='text-yellow-600'>Name is required</p>
+        <p className='text-purple-600'>Name is required</p>
        )}
       </div>
       <div className='flex flex-col gap-y-4'>
@@ -41,13 +41,13 @@ function Register() {
        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
         className={`bg-gray-200 p-2 rounded-lg focus:outline-0 ${submitted && !isValidEmail(email) ? 'bg-red-300' : ''}`} />
        {submitted && !isValidEmail(email) && (
-        <p className='text-yellow-600'>Email is not correct</p>
+        <p className='text-purple-600'>Email is not correct</p>
        )}
       </div>
       <div className='flex flex-col gap-y-4'>
        <label className='text-xl'>Password</label>
        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
-        className={`bg-gray-200 p-2 rounded-lg focus:outline-0 ${submitted && password.length < 6 ? 'bg-yellow-300' : ''}`} />
+        className={`bg-gray-200 p-2 rounded-lg focus:outline-0 ${submitted && password.length < 6 ? 'bg-purple-300' : ''}`} />
        {submitted && password.length < 6 && (
         <p className='text-red-600'>Password must be at least 6 characters</p>
        )}
