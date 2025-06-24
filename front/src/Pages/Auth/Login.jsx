@@ -18,7 +18,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await axios.post('https://tickets-books-production.up.railway.app/users/login', {
+      const response = await axios.post('https://tickets-apis.vercel.app/users/login', {
         email,
         password,
       });

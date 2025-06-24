@@ -27,7 +27,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('https://tickets-books-production.up.railway.app/categories');
+        const response = await axios.get('https://tickets-apis.vercel.app/categories');
         setCategories(response.data);
       } catch (error) {
         console.error('Failed to fetch categories:', error);
@@ -40,7 +40,7 @@ const AdminPanel = () => {
     const fetchEvents = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`https://tickets-books-production.up.railway.app/events?page=${page}&limit=10`);
+        const response = await axios.get(`https://tickets-apis.vercel.app/events?page=${page}&limit=10`);
         setEvents(prev => page === 1 ? response.data : [...prev, ...response.data]);
         setHasMore(response.data.length > 0);
       } catch (error) {
@@ -89,12 +89,12 @@ const AdminPanel = () => {
       };
 
       if (eventForm._id) {
-        await axios.put(`https://tickets-books-production.up.railway.app/events/${eventForm._id}`, payload);
+        await axios.put(`https://tickets-apis.vercel.app/events/${eventForm._id}`, payload);
       } else {
-        await axios.post('https://tickets-books-production.up.railway.app/events', payload);
+        await axios.post('https://tickets-apis.vercel.app/events', payload);
       }
 
-      const response = await axios.get(`https://tickets-books-production.up.railway.app/events?page=1&limit=${page * 10}`);
+      const response = await axios.get(`https://tickets-apis.vercel.app/events?page=1&limit=${page * 10}`);
       setEvents(response.data);
       resetForm();
     } catch (error) {
@@ -106,7 +106,7 @@ const AdminPanel = () => {
   const handleDeleteEvent = async (id) => {
     if (window.confirm('Are you sure you want to delete this event?')) {
       try {
-        await axios.delete(`https://tickets-books-production.up.railway.app/events/${id}`);
+        await axios.delete(`https://tickets-apis.vercel.app/events/${id}`);
         setEvents(events.filter(event => event._id !== id));
       } catch (error) {
         console.error('Error deleting event:', error);

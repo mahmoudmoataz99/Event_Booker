@@ -17,7 +17,7 @@ function Register() {
   setSubmitted(true);
 
   if (name && isValidEmail(email) && password.length >= 6) {
-   await axios.post('https://tickets-books-production.up.railway.app/users/register',{name,email,password,role:'user'})
+   await axios.post('https://tickets-apis.vercel.app/users/register',{name,email,password,role:'user'})
    alert('Registration successful!');
   }
  };

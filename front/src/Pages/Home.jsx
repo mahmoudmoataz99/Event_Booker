@@ -21,7 +21,7 @@ function Home() {
     const getEvents = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('https://tickets-books-production.up.railway.app/events');
+        const response = await axios.get('https://tickets-apis.vercel.app/events');
         const eventsWithDefaults = response.data.map(event => ({
           ...event,
           categories: Array.isArray(event.categories) ? event.categories : [],

@@ -18,13 +18,13 @@ function EventDetails() {
       try {
         setLoading(true);
 
-        const eventResponse = await axios.get(`https://tickets-books-production.up.railway.app/events/${eventId}`);
+        const eventResponse = await axios.get(`https://tickets-apis.vercel.app/events/${eventId}`);
         setEvent(eventResponse.data);
 
         if (user) {
           try {
             const bookingResponse = await axios.get(
-              `https://tickets-books-production.up.railway.app/bookings/checkBook/${user.id}/${eventId}`
+              `https://tickets-apis.vercel.app/bookings/checkBook/${user.id}/${eventId}`
             );
             setHasBooking(bookingResponse.data === true);
           } catch {
@@ -59,7 +59,7 @@ function EventDetails() {
 
     try {
       setLoading(true);
-      const response = await axios.post('https://tickets-books-production.up.railway.app/bookings/create', {
+      const response = await axios.post('https://tickets-apis.vercel.app/bookings/create', {
         eventId: event._id,
         userId: user.id,
         seats: seatsRequested

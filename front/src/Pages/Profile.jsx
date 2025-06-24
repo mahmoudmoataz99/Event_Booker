@@ -16,7 +16,7 @@ const Profile = () => {
 
       try {
         setIsLoading(true);
-        const response = await axios.get(`https://tickets-books-production.up.railway.app/bookings/user/${user.id}`);
+        const response = await axios.get(`https://tickets-apis.vercel.app/bookings/user/${user.id}`);
         setUserBookings(response.data);
       } catch (err) {
         setError('Failed to fetch bookings');
@@ -32,7 +32,7 @@ const Profile = () => {
   const cancelBooking = async (bookingId) => {
     try {
       setIsLoading(true);
-      await axios.put(`https://tickets-books-production.up.railway.app/bookings/cancel/${bookingId}`);
+      await axios.put(`https://tickets-apis.vercel.app/bookings/cancel/${bookingId}`);
       
       // Update the bookings list after cancellation
       setUserBookings(prevBookings => 
